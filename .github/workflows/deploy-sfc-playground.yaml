@@ -23,13 +23,13 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run:  cd packages/vant-sfc-playground && pnpm install
+        run:  pnpm install
 
       - name: Build playground
         run: cd packages/vant-sfc-playground && pnpm build
 
       - name: Deploy site
-        uses: JamesIves/github-pages-deploy-action@4.3.0
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
           branch: vant-sfc-playground-gh-page
           folder: packages/vant-sfc-playground/dist
